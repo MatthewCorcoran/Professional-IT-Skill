@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "../imports/Header";
-import Services from "../imports/Services";
+import maleClothing from "../imports/maleClothing";
 
-export default function Home(){
+export default function maleClothing(){
     return(
 //HEADER -Navbar
      <>
      <Header></Header>
         <main>
         <div className="container">
-            <Services></Services>
+            
         </div>
         </main>
        
