@@ -12,9 +12,10 @@ function App() {
    
           <Router>
             <Routes>
-            <Route exact path="/" element={<Home/>}/>
+           
             <Route  path="/login" element={<Login/>}/>
             <Route  path="/register" element={<Register/>}/>
+            <Route exact path="/" element={<Home/>}/>
             </Routes>
           </Router>
          

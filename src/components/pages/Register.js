@@ -1,6 +1,9 @@
 import React,{useState} from "react";
+import { useDispatch } from "react-redux";
 import BaseLogin from "../imports/BaseLogin";
 import RegisterFrom from "../imports/RegisterForm";
+import { registerAction } from "../../container/actions";
+import { useNavigate } from 'react-router-dom';
 
 export default function Register(){
 
@@ -9,6 +12,8 @@ export default function Register(){
   const [password,setPassword] = useState("");
   const [passwordCheck,setPasswordCheck] = useState("");
 
+  const dispatch = useDispatch()
+  const navigate = useNavigate();
   // on form submit ckick handler
   const handleSubmit = (event) => {
 
@@ -21,7 +26,16 @@ export default function Register(){
       passwordCheck
     }
 
-    console.log(newUser);
+    
+    
+    const validate = dispatch(registerAction(newUser));
+    validate
+      .then(data => {
+        // console.log(data)
+        navigate('/login');
+      })
+      .catch(error =>  console.log(error))
+   
 
   }
 
