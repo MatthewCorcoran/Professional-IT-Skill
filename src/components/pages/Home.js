@@ -9,14 +9,7 @@ export default function Home(){
 
     const user = useSelector(state => state.isLoggedIn);
     const navigate = useNavigate();
-
-  //  useEffect(() => {
-    //    if (!user()){
-      //      navigate('/login')
-       // }
-    //}, [user, navigate])
-    
-
+ 
     return(
 //HEADER -Navbar
      <>

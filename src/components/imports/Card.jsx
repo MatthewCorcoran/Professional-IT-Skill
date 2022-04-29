@@ -15,10 +15,11 @@ const Card = ({
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">Check out our new shock just click the button below.</p>
-                        <NavLink to= "maleDepartment" className="btn btn-primary">Go to Page</NavLink>
                     </div>
                 </div>
             </div>
+
+            
         </>
     )
 }
